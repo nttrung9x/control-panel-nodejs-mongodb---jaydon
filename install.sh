@@ -24,6 +24,9 @@ echo "5/12. Installing Node.js"
 curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt install nodejs -y
 
+echo "5.2/12. Installing npm of Node.js"
+sudo apt install npm -y
+
 echo "6/12. Installing Yarn"
 sudo npm i -g yarn
 
