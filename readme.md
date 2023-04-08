@@ -5,6 +5,11 @@
 [![Follow new releases](https://app.releasly.co/assets/badges/badge-green.svg)](https://app.releasly.co/sites/ozgrozer/jaydon)
 
 Nginx Control Panel
+```
+Admin: http://domain:1148/
+Username: root
+Password: root
+```
 
 > This is an experimental control panel written for a niche reason. Use at your own risk.
 
