@@ -2,6 +2,7 @@ echo "0/14. update & upgrade server"
 sudo apt update && sudo apt upgrade
 sudo apt-get install curl -y
 sudo apt-get install tar -y
+sudo apt-get install python3 g++ make python3-pip -y
 
 echo "1/14. Installing MongoDB"
 sudo apt install gnupg -y
