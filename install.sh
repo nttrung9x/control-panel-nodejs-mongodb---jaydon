@@ -30,6 +30,7 @@ echo "--- nvm list-remote:"
 nvm list-remote
 
 echo "6/14. Installing Node.js 16.15.1"
+sudo apt-get remove nodejs
 nvm install 16.15.1
 
 echo "7/14. Installing npm of Node.js"
