@@ -27,6 +27,7 @@ echo "4/14. Installing Git"
 sudo apt install git -y
 
 echo "5/14. Install nodejs and npm"
+sudo apt update -y
 apt remove nodejs -y
 curl https://nodejs.org/dist/v16.15.1/node-v16.15.1-linux-x64.tar.xz --output node-v16.15.1-linux-x64.tar.xz
 VERSION=v16.15.1
