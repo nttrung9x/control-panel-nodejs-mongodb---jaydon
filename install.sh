@@ -21,6 +21,7 @@ echo "4/14. Installing Git"
 sudo apt install git -y
 
 echo "5/14. Install nvm to install nodejs and npm"
+sudo apt update && sudo apt upgrade
 wget https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh
 bash install.sh
 source ~/.bashrc
