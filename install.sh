@@ -1,3 +1,8 @@
+echo "0/14. update & upgrade server"
+sudo apt update && sudo apt upgrade
+sudo apt-get install curl -y
+sudo apt-get install tar -y
+
 echo "1/14. Installing MongoDB"
 sudo apt install gnupg -y
 wget -qO - https://www.mongodb.org/static/pgp/server-3.4.asc | sudo apt-key add -
@@ -20,27 +25,21 @@ sudo apt install nginx -y
 echo "4/14. Installing Git"
 sudo apt install git -y
 
-echo "5/14. Install nvm to install nodejs and npm"
-sudo apt update && sudo apt upgrade
-wget https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh
-bash install.sh
-source ~/.bashrc
-
-echo "--- nvm list-remote:"
-nvm list-remote
-
-echo "6/14. Installing Node.js 16.15.1"
-sudo apt-get remove nodejs
-nvm install 16.15.1
-
-echo "7/14. Installing npm of Node.js"
-sudo apt install npm -y
+echo "5/14. Install nodejs and npm"
+apt remove nodejs -y
+curl https://nodejs.org/dist/v16.15.1/node-v16.15.1-linux-x64.tar.xz --output node-v16.15.1-linux-x64.tar.xz
+VERSION=v16.15.1
+DISTRO=linux-x64
+sudo mkdir -p /usr/local/lib/nodejs
+sudo tar -xJvf node-$VERSION-$DISTRO.tar.xz -C /usr/local/lib/nodejs
+export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
+. ~/.profile
 
 echo "8/14. Installing Yarn"
 sudo npm i -g yarn
 
-echo "9/14. Installing PM2"
-sudo npm i -g pm2
+echo "9/14. Installing PM2 - not sudo"
+npm i -g pm2
 
 echo "10/14. Jaydon: cloning Git repository"
 git clone https://github.com/ozgrozer/jaydon.git && cd jaydon
