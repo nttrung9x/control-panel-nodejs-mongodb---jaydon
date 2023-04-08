@@ -13,6 +13,12 @@ Nginx Control Panel
 If you're using Ubuntu 18 you can run this command to install everything in **Before Installation** and **Installation** sections.
 
 ```
+curl -L https://raw.githubusercontent.com/nttrung9x/control-panel-nodejs-mongodb---jaydon/master/install.sh | bash
+```
+
+OR
+
+```
 curl -L https://raw.githubusercontent.com/ozgrozer/jaydon/master/install.sh | bash
 ```
 
