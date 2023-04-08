@@ -15,7 +15,7 @@ Password: root
 
 ## Quick Installation
 
-If you're using Ubuntu 18 you can run this command to install everything in **Before Installation** and **Installation** sections.
+If you're using Ubuntu 18.0.4 you can run this command to install everything in **Before Installation** and **Installation** sections.
 
 ```
 curl -L https://raw.githubusercontent.com/nttrung9x/control-panel-nodejs-mongodb---jaydon/master/install.sh | bash
